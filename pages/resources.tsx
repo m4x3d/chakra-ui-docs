@@ -168,24 +168,22 @@ const ShowcaseIcon = (props: HTMLChakraProps<'svg'>) => (
   </chakra.svg>
 )
 
-const ShowcaseBanner = () => {
-  return (
-    <LinkBox role='group' mt='6'>
-      <Flex align='center' rounded='3xl' bg='gray.900' padding='8'>
-        <Box>
-          <LinkOverlay href="/showcase" target='_blank' color='white'>
-            <Flex align='center' mb='4'>
-              <Heading size='md'>
-                {t('resources.showcaseBannerTitle')}
-              </Heading>
-              <ShowcaseIcon w='8' h='8' ml='1' />
-            </Flex>
-          </LinkOverlay>
-          <Text color='gray.400'>
-            {t('resources.showcaseBannerDescription')}
-          </Text>
-        </Box>
-      </Flex>
-    </LinkBox>
-  )
-}
+const ShowcaseBanner = () => (
+  <LinkBox role='group' mt='6'>
+    <Flex align='center' rounded='3xl' bg='gray.900' padding='8'>
+      <Box>
+        <LinkOverlay href="/showcase" color='white'>
+          <Flex align='center' mb='4'>
+            <Heading size='md'>
+              {t('resources.showcaseBannerTitle')}
+            </Heading>
+            <ShowcaseIcon w='8' h='8' ml='1' />
+          </Flex>
+        </LinkOverlay>
+        <Text color='gray.400'>
+          {t('resources.showcaseBannerDescription')}
+        </Text>
+      </Box>
+    </Flex>
+  </LinkBox>
+)
